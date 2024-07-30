@@ -33,6 +33,9 @@ class Solution
     			}
             }
             
+            //좌로 가면 좌 확인, 후 위로
+            //우로 가면 우 확인, 후 위로
+            //위로 가면 좌 확인, 우 확인 후 위로
             while (rowCnt < 100) {
             	if (direction != 1 && column - 1 >= 0 && arr[100 - rowCnt][column - 1] == 1) {
                 	column -= 1;

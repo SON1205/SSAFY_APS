@@ -22,11 +22,12 @@ class Solution
             }
             
             int max = 0;
-            // index 범위 조심
+            // index 범위 조심, 시작점
             for (int i = 0; i < N - M + 1; i++) {
                 for (int j = 0; j < N - M + 1; j++) {
                     int sum = 0;
                     
+                    //파리 잡기 : 크기 M X M
                     for (int p = 0; p < M; p++) {
                         for (int q = 0; q < M; q++) {
                             sum += arr[i + p][j + q];
