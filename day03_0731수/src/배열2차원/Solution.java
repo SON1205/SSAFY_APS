@@ -1,4 +1,4 @@
-package ë°°ì—´2ì°¨ì›;
+package ¹è¿­2Â÷¿ø;
 
 public class Solution {
 
