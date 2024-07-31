@@ -17,7 +17,7 @@ public class Solution {
             }
             
             int N = 100;
-            boolean flag = true;
+            boolean flag = true; 
             
             while (N > 0 && flag) {
             	if (N == 1) {

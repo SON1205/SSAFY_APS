@@ -20,7 +20,7 @@ class Solution
 					palin = false;
 				}
 			}
-		
+		 
 			if (palin) {
 				System.out.println("#" + test_case + " " + 1);
 			} else {
