@@ -22,39 +22,37 @@ public class Solution {
 			}
 			
 			//경우를 따지자
-			for (int i = 0; i < N - 2; i++) {//R
-				for (int j = i + 1; j < N - 1; j++) {//B
-					for (int k = j + 1; k < N; k++) {//W
-						int tmp = 0;
-						
-						int idx = 0;
-						while (idx < N) {
-							if (idx <= i) {
-								for (int p = 0; p < M; p++) {
-									if (flag[idx].charAt(p) == 'W') {
-										tmp++;
-									}
-								}
-							} else if (idx <= j) {
-								for (int p = 0; p < M; p++) {
-									if (flag[idx].charAt(p) == 'B') {
-										tmp++;
-									}
-								}
-							} else {
-								for (int p = 0; p < M; p++) {
-									if (flag[idx].charAt(p) == 'R') {
-										tmp++;
-									}
+			for (int i = 0; i < N - 2; i++) {//W와 B
+				for (int j = i + 1; j < N - 1; j++) {//B와 R
+					int tmp = 0;
+					
+					int idx = 0;
+					while (idx < N) {
+						if (idx <= i) {
+							for (int p = 0; p < M; p++) {
+								if (flag[idx].charAt(p) == 'W') {
+									tmp++;
 								}
 							}
-							
-							idx++;
+						} else if (idx <= j) {
+							for (int p = 0; p < M; p++) {
+								if (flag[idx].charAt(p) == 'B') {
+									tmp++;
+								}
+							}
+						} else {
+							for (int p = 0; p < M; p++) {
+								if (flag[idx].charAt(p) == 'R') {
+									tmp++;
+								}
+							}
 						}
 						
-						if (tmp > max) {
-							max = tmp;
-						}
+						idx++;
+					}
+					
+					if (tmp > max) {
+						max = tmp;
 					}
 				}
 			}
