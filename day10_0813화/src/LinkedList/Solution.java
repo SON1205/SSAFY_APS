@@ -1,4 +1,4 @@
-package 배열2차원;
+package LinkedList;
 
 public class Solution {
 
